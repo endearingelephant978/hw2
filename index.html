@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>CS1300 HW2: Responsive Redesign</title>
+</head>
+
+<body>
+    <h1>RESPONSIVE REDESIGN</h1>
+
+    <h2>OVERVIEW</h2>
+
+    <p>
+        This project is a redesign of a website that has a few usability and accessibility problems. First I analyze
+        these problems, then I make low-fidelity and high-fidelity prototypes for a redesign that addresses these
+        problems, and finally I code a responsive page based on those prototypes.
+    </p>
+
+    <img src="images\shangrila-original-screenshot.png">
+
+    <p>
+        <a href="https://shangrilatop100ma.com/">shangrilatop100ma.com</a>
+    </p>
+
+    <p>
+        The website I chose to analyze is the landing page for my favorite restaurant from my hometown, and while this
+        is actually already a more recent redesign of their website (the older one left even more to be desired), there
+        are still a few design problems to be addressed.
+    </p>
+
+    <h2>ORIGINAL DESIGN ANALYSIS</h2>
+
+    <h4>USABILITY PROBLEMS</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">PROBLEM</th>
+                <th scope="col">EXAMPLE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">superfluous links</th>
+                <td>
+                    there are four separate links in the top half of the page that all take you to the online ordering
+                    page (grated because three of them are attached to the scrolling pictures, you only ever see at most
+                    two at once, but this is still more than is necessary)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">misuse of spacing</th>
+                <td>
+                    there is inconsistently a lot of space around every element; this isn't just an aesthetic issue, as
+                    the options in the navbar at the top of the page can be a bit hard to parse at first glance because
+                    the spacing is inconsistent
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">misuse of ordering</th>
+                <td>
+                    the space for content at top of the page is not well utilized; most of the information there isn't
+                    helpful for new users (but instead shows up further down on the page), and the online ordering
+                    buttons should be even more prominent for experienced users to be able to beeline straight to them
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">misleading links</th>
+                <td>
+                    there is a link on the page connected to a Google icon, and on the mobile site (but not on the
+                    desktop site for some reason) the text “Follow Us!” appears next to it, which implies some sort of
+                    Google social media site, but instead the link takes you to Google maps with the destination set to
+                    the address of the restaurant
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>ACCESSIBILITY PROBLEMS</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">PROBLEM</th>
+                <th scope="col">EXAMPLE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">excessive bandwidth</th>
+                <td>
+                    three (out of a total seven) links that bring you back to this exact page actually unnecessarily
+                    reload the page, which causes an accessibility issue by using extra internet bandwidth when not
+                    required
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">text-on-image contrast</th>
+                <td>
+                    the white text on the pictures overlaps with the food detail on the righthand side of the picture,
+                    making it hard to read (which only happens on mobile, so this actually could be addressed as a
+                    scaling issue)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">missing alternative text</th>
+                <td>
+                    according to the WAVE tool, there are some pictures on the page that are missing alternative text,
+                    which could cause trouble for people using screen readers
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>LO-FI WIREFRAMES</h2>
+
+    <p>
+        The following are lo-fi wireframe sketches for a redesign that address the issues I found in my analysis. There
+        is a desktop wireframe, a tablet wireframe, and a mobile wireframe. Each design choice is annotated with number
+        that corresponds to the usability/accessibility problem being addressed:
+    <ol>
+        <li>
+            superfluous links → collapsed all four different "order" buttons into one
+        </li>
+        <li>
+            misuse of spacing → appropriately spaced separate elements in footer
+        </li>
+        <li>
+            misuse of ordering → put key features of the website in a more natural order
+        </li>
+        <li>
+            misleading links → reskinned the Google maps link to make its function clearer
+        </li>
+        <li>
+            excessive bandwidth → removed links that unnecessarily reloaded the page
+        </li>
+        <li>
+            text-on-image contrast → moved pictures out from behind any text
+        </li>
+        <li>
+            missing alternative text → (intend to) include alternative text for all images
+        </li>
+    </ol>
+    </p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">DESKTOP</th>
+                <th scope="col">TABLET</th>
+                <th scope="col">MOBILE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <img src="images\lofi\desktop.png" style="width: 100%;">
+                </td>
+                <td>
+                    <img src="images\lofi\tablet.png" style="width: 100%;">
+                </td>
+                <td>
+                    <img src="images\lofi\mobile.png" style="width: 100%;">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>VISUAL DESIGN STYLE GUIDE</h2>
+
+    <p>
+        The following is a simple visual design style guide made in Figma that covers all the components I'll need for
+        my hi-fi prototypes.
+    </p>
+
+    <p>
+        <img src="images\ui-style-guide.png">
+    </p>
+
+    <h2>HI-FI PROTOTYPES</h2>
+
+    <p>
+        The following are three high-fidelity prototypes made in Figma for desktop, tablet, and mobile, based on the prior low-fidelity sketches. (Note that the text content is still just a placeholder.)
+    </p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">DESKTOP</th>
+                <th scope="col">TABLET</th>
+                <th scope="col">MOBILE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <img src="images\hifi\desktop.png" style="width: 100%;">
+                </td>
+                <td>
+                    <img src="images\hifi\tablet.png" style="width: 100%;">
+                </td>
+                <td>
+                    <img src="images\hifi\mobile.png" style="width: 100%;">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        Additionally, here is the annotated version of the hi-fi prototypes with implementation specifications.
+    </p>
+    <p>
+        <img src="images\hifi\annotatedall.png" style="width: 100%;">
+    </p>
+
+    <h2>RESPONSIVE WEBPAGE</h2>
+    <p>
+        Now, based on my hi-fi prototypes and my implementation annotations, I have attempted to make a responsive webpage that in theory would have fixed all the usability problems I found in the original page. You can view the website <a href="/redesign.html">here</a>.
+    </p>
+
+</body>
+
+</html>
